@@ -5,13 +5,14 @@ Test Setup      Abrir navegador
 Suite Teardown
 Test Teardown   Fechar navegador
 
-### SETUP ->    roda keywords antes de executar todos os testes da suíte ou antes de um teste
+###SETUP ->    roda keywords antes de executar todos os testes da suíte ou antes de um teste
 ### TEARDOWN -> roda keyword depois de uma suite ou um teste
 
 *** Test Case ***
 
 #AUTOMATIZAR
 Cenário 01: Validar ação de marcar consulta
+    [Tags]   auto
     Dado que estou na página home do site
     Quando eu clicar em "Marque uma consulta"
     Então mostra a pergunta "Que tipo de atendimento você está procurando"
@@ -22,7 +23,7 @@ Cenário 02: Validar Marcação de consulta
     PLANO DE SAÚDE   BRADESCO     SAUDE BRADESCO NACIONAL ENFERMARIA
 
     Dado que estou na página home do site
-    Quando eu clicar em "Marque uma consulta"
+    Quando eu clicar em "Marque uma consulta" para marcar
     Então deve abrir uma nova aba contendo a pergunta "Que tipo de atendimento você está procurando"
     E ao selecionar PRESENCIAL
     E ao buscar uma especialiadade ou médico desejado "Oncologia Clinica"
@@ -35,9 +36,10 @@ Cenário 02: Validar Marcação de consulta
 
 #AUTOMATIZAR
 Cenário 03: Validar ação de Marcar Exames
+    [Tags]   auto
     Dado que estou na página home do site
-    Quando eu clicar em "Marque seus exames"
-    Então mostra a pergunta "Que tipo de exame você gostaria de marcar?"
+    Quando eu clicar em "Marque seus exames" exame
+    Então mostra a pergunta "Que tipo de exame você gostaria de marcar?" tipo exame
 
 Cenário 04: Validar Unidades
     Dado que estou na página home do site
@@ -61,6 +63,7 @@ Cenário 06: Validar Exames e Procedimentos
 
 #AUTOMATIZAR
 Cenário 07: Validar Resultado de Exames
+    [Tags]   auto
     Dado que estou na página home do site
     E clico no menu superior RESULTADO DE EXAMES
     Quando seleciono a unidade desejada
@@ -77,6 +80,7 @@ Cenário 08: Validar a busca de um Médico
 
 #AUTOMATIZAR
 Cenário 09: Validar área do Médico
+    [Tags]   auto
     Dado que estou na página home do site
     E clico no menu superior direito "Área do Médico"
     Quando clico em "Resultados de Exames"

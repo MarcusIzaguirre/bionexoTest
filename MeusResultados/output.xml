@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210912 18:49:42.278" rpa="false" schemaversion="2">
+<suite id="s1" name="Test" source="C:\Users\marcu\OneDrive\Área de Trabalho\BIONEXO\Test">
+<suite id="s1-s1" name="BDD Bionexo" source="C:\Users\marcu\OneDrive\Área de Trabalho\BIONEXO\Test\BDD_Bionexo.robot">
+<test id="s1-s1-t1" name="Cenário 01: Validar ação de marcar consulta">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210912 18:49:42.816" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210912 18:49:42.815" endtime="20210912 18:49:45.288"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210912 18:49:45.289" endtime="20210912 18:49:45.451"/>
+</kw>
+<status status="PASS" starttime="20210912 18:49:42.814" endtime="20210912 18:49:45.452"/>
+</kw>
+<kw name="Dado que estou na página home do site" library="Resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>https://www.rededorsaoluiz.com.br/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210912 18:49:45.455" level="INFO">Opening url 'https://www.rededorsaoluiz.com.br/'</msg>
+<status status="PASS" starttime="20210912 18:49:45.454" endtime="20210912 18:49:48.155"/>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>Hospitais Rede D'Or São Luiz</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210912 18:49:48.171" level="INFO">Page title is 'Hospitais Rede D'Or São Luiz'.</msg>
+<status status="PASS" starttime="20210912 18:49:48.155" endtime="20210912 18:49:48.171"/>
+</kw>
+<status status="PASS" starttime="20210912 18:49:45.453" endtime="20210912 18:49:48.171"/>
+</kw>
+<kw name="Quando eu clicar em &quot;Marque uma consulta&quot;" library="Resource" sourcename="Quando eu clicar em &quot;${MARCAR_CONSULTA}&quot;">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=/html/body/app-root/div/app-rededorsaoluiz/div/main/app-homepage/div/div/div/app-home-ctas/app-home-cta[1]/rdsl-cta/div/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210912 18:49:48.173" endtime="20210912 18:49:48.256"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=/html/body/app-root/div/app-rededorsaoluiz/div/main/app-homepage/div/div/div/app-home-ctas/app-home-cta[1]/rdsl-cta/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210912 18:49:48.256" level="INFO">Clicking element 'xpath=/html/body/app-root/div/app-rededorsaoluiz/div/main/app-homepage/div/div/div/app-home-ctas/app-home-cta[1]/rdsl-cta/div/a'.</msg>
+<status status="PASS" starttime="20210912 18:49:48.256" endtime="20210912 18:49:48.846"/>
+</kw>
+<status status="PASS" starttime="20210912 18:49:48.172" endtime="20210912 18:49:48.846"/>
+</kw>
+<kw name="Então mostra a pergunta &quot;Que tipo de atendimento você está procurando&quot;" library="Resource" sourcename="Então mostra a pergunta &quot;${PERGUNTA_TIPO_ATENDIMENTO}&quot;">
+<kw name="Switch Window" library="Selenium2Library">
+<arg>title=Agendamento de Consultas | Rede D'Or São Luiz</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20210912 18:49:48.849" endtime="20210912 18:51:19.933"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//span[@data-qa-id='MedicoEspecialidade_Titulo_Mutavel']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210912 18:51:19.933" endtime="20210912 18:51:20.885"/>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>Especialidade / Médico - Agendamento de Consultas | Rede D'Or São Luiz</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210912 18:51:20.896" level="INFO">Page title is 'Especialidade / Médico - Agendamento de Consultas | Rede D'Or São Luiz'.</msg>
+<status status="PASS" starttime="20210912 18:51:20.885" endtime="20210912 18:51:20.896"/>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>xpath=//span[@data-qa-id='MedicoEspecialidade_Titulo_Mutavel']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210912 18:51:20.918" level="INFO">Current page contains element 'xpath=//span[@data-qa-id='MedicoEspecialidade_Titulo_Mutavel']'.</msg>
+<status status="PASS" starttime="20210912 18:51:20.897" endtime="20210912 18:51:20.918"/>
+</kw>
+<status status="PASS" starttime="20210912 18:49:48.847" endtime="20210912 18:51:20.919"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210912 18:51:20.921" endtime="20210912 18:51:23.211"/>
+</kw>
+<status status="PASS" starttime="20210912 18:51:20.920" endtime="20210912 18:51:23.211"/>
+</kw>
+<tag>auto</tag>
+<status status="PASS" starttime="20210912 18:49:42.813" endtime="20210912 18:51:23.211"/>
+</test>
+<test id="s1-s1-t2" name="Cenário 03: Validar ação de Marcar Exames">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210912 18:51:23.226" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210912 18:51:23.225" endtime="20210912 18:51:25.611"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210912 18:51:25.611" endtime="20210912 18:51:25.745"/>
+</kw>
+<status status="PASS" starttime="20210912 18:51:23.223" endtime="20210912 18:51:25.745"/>
+</kw>
+<kw name="Dado que estou na página home do site" library="Resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>https://www.rededorsaoluiz.com.br/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210912 18:51:25.753" level="INFO">Opening url 'https://www.rededorsaoluiz.com.br/'</msg>
+<status status="PASS" starttime="20210912 18:51:25.752" endtime="20210912 18:51:28.376"/>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>Hospitais Rede D'Or São Luiz</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210912 18:51:28.392" level="INFO">Page title is 'Hospitais Rede D'Or São Luiz'.</msg>
+<status status="PASS" starttime="20210912 18:51:28.376" endtime="20210912 18:51:28.392"/>
+</kw>
+<status status="PASS" starttime="20210912 18:51:25.745" endtime="20210912 18:51:28.393"/>
+</kw>
+<kw name="Quando eu clicar em &quot;Marque seus exames&quot; exame" library="Resource" sourcename="Quando eu clicar em &quot;${MARCAR_EXAME}&quot; exame">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>css=body &gt; app-root &gt; div &gt; app-rededorsaoluiz &gt; div &gt; main &gt; app-homepage &gt; div &gt; div &gt; div &gt; app-home-ctas &gt; app-home-cta:nth-child(2) &gt; rdsl-cta &gt; div &gt; a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210912 18:51:28.395" endtime="20210912 18:51:28.474"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>css=body &gt; app-root &gt; div &gt; app-rededorsaoluiz &gt; div &gt; main &gt; app-homepage &gt; div &gt; div &gt; div &gt; app-home-ctas &gt; app-home-cta:nth-child(2) &gt; rdsl-cta &gt; div &gt; a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210912 18:51:28.474" level="INFO">Clicking element 'css=body &gt; app-root &gt; div &gt; app-rededorsaoluiz &gt; div &gt; main &gt; app-homepage &gt; div &gt; div &gt; div &gt; app-home-ctas &gt; app-home-cta:nth-child(2) &gt; rdsl-cta &gt; div &gt; a'.</msg>
+<status status="PASS" starttime="20210912 18:51:28.474" endtime="20210912 18:51:28.938"/>
+</kw>
+<status status="PASS" starttime="20210912 18:51:28.394" endtime="20210912 18:51:28.938"/>
+</kw>
+<kw name="Então mostra a pergunta &quot;Que tipo de exame você gostaria de marcar?&quot; tipo exame" library="Resource" sourcename="Então mostra a pergunta &quot;${PERGUNTA_EXAME}&quot; tipo exame">
+<kw name="Switch Window" library="Selenium2Library">
+<arg>title=Exame - Agendamento de Exames | Rede D`Or São Luiz</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20210912 18:51:28.941" endtime="20210912 18:51:31.572"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>css=#app-main &gt; div &gt; app-exame &gt; app-swipe &gt; div &gt; div &gt; div &gt; main &gt; h1</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210912 18:51:31.572" endtime="20210912 18:51:31.664"/>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>Exame - Agendamento de Exames | Rede D`Or São Luiz</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210912 18:51:31.674" level="INFO">Page title is 'Exame - Agendamento de Exames | Rede D`Or São Luiz'.</msg>
+<status status="PASS" starttime="20210912 18:51:31.664" endtime="20210912 18:51:31.674"/>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>css=#app-main &gt; div &gt; app-exame &gt; app-swipe &gt; div &gt; div &gt; div &gt; main &gt; h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210912 18:51:31.692" level="INFO">Current page contains element 'css=#app-main &gt; div &gt; app-exame &gt; app-swipe &gt; div &gt; div &gt; div &gt; main &gt; h1'.</msg>
+<status status="PASS" starttime="20210912 18:51:31.675" endtime="20210912 18:51:31.692"/>
+</kw>
+<status status="PASS" starttime="20210912 18:51:28.940" endtime="20210912 18:51:31.692"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210912 18:51:31.694" endtime="20210912 18:51:34.237"/>
+</kw>
+<status status="PASS" starttime="20210912 18:51:31.693" endtime="20210912 18:51:34.237"/>
+</kw>
+<tag>auto</tag>
+<status status="PASS" starttime="20210912 18:51:23.220" endtime="20210912 18:51:34.237"/>
+</test>
+<test id="s1-s1-t3" name="Cenário 07: Validar Resultado de Exames">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210912 18:51:34.251" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210912 18:51:34.250" endtime="20210912 18:51:36.570"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210912 18:51:36.570" endtime="20210912 18:51:36.707"/>
+</kw>
+<status status="PASS" starttime="20210912 18:51:34.249" endtime="20210912 18:51:36.707"/>
+</kw>
+<kw name="Dado que estou na página home do site" library="Resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>https://www.rededorsaoluiz.com.br/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210912 18:51:36.709" level="INFO">Opening url 'https://www.rededorsaoluiz.com.br/'</msg>
+<status status="PASS" starttime="20210912 18:51:36.709" endtime="20210912 18:51:39.158"/>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>Hospitais Rede D'Or São Luiz</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210912 18:51:39.191" level="INFO">Page title is 'Hospitais Rede D'Or São Luiz'.</msg>
+<status status="PASS" starttime="20210912 18:51:39.159" endtime="20210912 18:51:39.191"/>
+</kw>
+<status status="PASS" starttime="20210912 18:51:36.707" endtime="20210912 18:51:39.191"/>
+</kw>
+<kw name="E clico no menu superior RESULTADO DE EXAMES" library="Resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>css=body &gt; app-root &gt; div &gt; app-rededorsaoluiz &gt; div &gt; app-header &gt; header &gt; nav &gt; ul.menu-principal &gt; li:nth-child(5) &gt; a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210912 18:51:39.195" endtime="20210912 18:51:39.283"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>css=body &gt; app-root &gt; div &gt; app-rededorsaoluiz &gt; div &gt; app-header &gt; header &gt; nav &gt; ul.menu-principal &gt; li:nth-child(5) &gt; a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210912 18:51:39.284" level="INFO">Clicking element 'css=body &gt; app-root &gt; div &gt; app-rededorsaoluiz &gt; div &gt; app-header &gt; header &gt; nav &gt; ul.menu-principal &gt; li:nth-child(5) &gt; a'.</msg>
+<status status="PASS" starttime="20210912 18:51:39.283" endtime="20210912 18:51:39.456"/>
+</kw>
+<status status="PASS" starttime="20210912 18:51:39.194" endtime="20210912 18:51:39.456"/>
+</kw>
+<kw name="Quando seleciono a unidade desejada" library="Resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//select[@name="select"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210912 18:51:39.475" endtime="20210912 18:51:40.564"/>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<arg>xpath=//select[@name="select"]</arg>
+<arg>bangu</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210912 18:51:40.565" level="INFO">Selecting options from selection list 'xpath=//select[@name="select"]' by value bangu.</msg>
+<status status="PASS" starttime="20210912 18:51:40.565" endtime="20210912 18:51:40.722"/>
+</kw>
+<status status="PASS" starttime="20210912 18:51:39.474" endtime="20210912 18:51:40.722"/>
+</kw>
+<kw name="Então é mostrado abaixo o quadro da ÁREA DO PACIENTE" library="Resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//h2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210912 18:51:40.724" endtime="20210912 18:51:41.260"/>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>xpath=//h2</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210912 18:51:41.275" level="INFO">Current page contains element 'xpath=//h2'.</msg>
+<status status="PASS" starttime="20210912 18:51:41.260" endtime="20210912 18:51:41.275"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0, 200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20210912 18:51:41.275" level="INFO">Executing JavaScript:
+window.scrollTo(0, 200)
+Without any arguments.</msg>
+<status status="PASS" starttime="20210912 18:51:41.275" endtime="20210912 18:51:41.302"/>
+</kw>
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<arg>xpath=//*[@title='Acessar resultados']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210912 18:51:41.303" endtime="20210912 18:51:41.623"/>
+</kw>
+<status status="PASS" starttime="20210912 18:51:40.723" endtime="20210912 18:51:41.623"/>
+</kw>
+<kw name="E clico em &quot;ACESSAR RESULTADOS&quot;" library="Resource" sourcename="E clico em &quot;${ACESSAR_RESULTADOS}&quot;">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@title='Acessar resultados']</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210912 18:51:41.632" endtime="20210912 18:51:41.687"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath=//*[@title='Acessar resultados']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210912 18:51:41.688" level="INFO">Clicking element 'xpath=//*[@title='Acessar resultados']'.</msg>
+<status status="PASS" starttime="20210912 18:51:41.687" endtime="20210912 18:51:41.854"/>
+</kw>
+<status status="PASS" starttime="20210912 18:51:41.623" endtime="20210912 18:51:41.855"/>
+</kw>
+<kw name="Então é aberta uma nova aba para fazer o login no sistema" library="Resource">
+<kw name="Switch Window" library="Selenium2Library">
+<arg>title=Área do Paciente - Sua saúde em um só lugar</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20210912 18:51:41.866" endtime="20210912 18:52:13.328"/>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>Área do Paciente - Sua saúde em um só lugar</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210912 18:52:13.336" level="INFO">Page title is 'Área do Paciente - Sua saúde em um só lugar'.</msg>
+<status status="PASS" starttime="20210912 18:52:13.329" endtime="20210912 18:52:13.336"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>id=btnEntrar</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210912 18:52:13.336" endtime="20210912 18:52:13.388"/>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>id=btnEntrar</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210912 18:52:13.398" level="INFO">Current page contains element 'id=btnEntrar'.</msg>
+<status status="PASS" starttime="20210912 18:52:13.388" endtime="20210912 18:52:13.399"/>
+</kw>
+<status status="PASS" starttime="20210912 18:51:41.866" endtime="20210912 18:52:13.399"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210912 18:52:13.401" endtime="20210912 18:52:15.875"/>
+</kw>
+<status status="PASS" starttime="20210912 18:52:13.400" endtime="20210912 18:52:15.875"/>
+</kw>
+<tag>auto</tag>
+<status status="PASS" starttime="20210912 18:51:34.246" endtime="20210912 18:52:15.877"/>
+</test>
+<test id="s1-s1-t4" name="Cenário 09: Validar área do Médico">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210912 18:52:15.889" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210912 18:52:15.887" endtime="20210912 18:52:18.112"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210912 18:52:18.113" endtime="20210912 18:52:18.282"/>
+</kw>
+<status status="PASS" starttime="20210912 18:52:15.886" endtime="20210912 18:52:18.283"/>
+</kw>
+<kw name="Dado que estou na página home do site" library="Resource">
+<kw name="Go To" library="Selenium2Library">
+<arg>https://www.rededorsaoluiz.com.br/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210912 18:52:18.285" level="INFO">Opening url 'https://www.rededorsaoluiz.com.br/'</msg>
+<status status="PASS" starttime="20210912 18:52:18.285" endtime="20210912 18:52:20.545"/>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>Hospitais Rede D'Or São Luiz</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210912 18:52:20.632" level="INFO">Page title is 'Hospitais Rede D'Or São Luiz'.</msg>
+<status status="PASS" starttime="20210912 18:52:20.545" endtime="20210912 18:52:20.632"/>
+</kw>
+<status status="PASS" starttime="20210912 18:52:18.284" endtime="20210912 18:52:20.633"/>
+</kw>
+<kw name="E clico no menu superior direito &quot;Área do Médico&quot;" library="Resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>css=body &gt; app-root &gt; div &gt; app-rededorsaoluiz &gt; div &gt; app-header &gt; header &gt; nav &gt; ul.menu-sec &gt; li.hasSubItem &gt; a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210912 18:52:20.639" endtime="20210912 18:52:20.870"/>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<arg>css=body &gt; app-root &gt; div &gt; app-rededorsaoluiz &gt; div &gt; app-header &gt; header &gt; nav &gt; ul.menu-sec &gt; li.hasSubItem &gt; a</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20210912 18:52:20.871" level="INFO">Simulating Mouse Over on element 'css=body &gt; app-root &gt; div &gt; app-rededorsaoluiz &gt; div &gt; app-header &gt; header &gt; nav &gt; ul.menu-sec &gt; li.hasSubItem &gt; a'.</msg>
+<status status="PASS" starttime="20210912 18:52:20.871" endtime="20210912 18:52:21.393"/>
+</kw>
+<status status="PASS" starttime="20210912 18:52:20.638" endtime="20210912 18:52:21.393"/>
+</kw>
+<kw name="Quando clico em &quot;Resultados de Exames&quot;" library="Resource">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>css=body &gt; app-root &gt; div &gt; app-rededorsaoluiz &gt; div &gt; app-header &gt; header &gt; nav &gt; ul.menu-sec &gt; li.hasSubItem &gt; div &gt; ul &gt; li:nth-child(1) &gt; a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210912 18:52:21.397" endtime="20210912 18:52:21.478"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>css=body &gt; app-root &gt; div &gt; app-rededorsaoluiz &gt; div &gt; app-header &gt; header &gt; nav &gt; ul.menu-sec &gt; li.hasSubItem &gt; div &gt; ul &gt; li:nth-child(1) &gt; a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210912 18:52:21.479" level="INFO">Clicking element 'css=body &gt; app-root &gt; div &gt; app-rededorsaoluiz &gt; div &gt; app-header &gt; header &gt; nav &gt; ul.menu-sec &gt; li.hasSubItem &gt; div &gt; ul &gt; li:nth-child(1) &gt; a'.</msg>
+<status status="PASS" starttime="20210912 18:52:21.479" endtime="20210912 18:52:21.674"/>
+</kw>
+<status status="PASS" starttime="20210912 18:52:21.395" endtime="20210912 18:52:21.674"/>
+</kw>
+<kw name="Então valido a área do médico com a possibilidade de login" library="Resource">
+<kw name="Switch Window" library="Selenium2Library">
+<arg>title=Resultado de exames - Área do Médico</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20210912 18:52:21.677" endtime="20210912 18:52:24.871"/>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>Resultado de exames - Área do Médico</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210912 18:52:24.882" level="INFO">Page title is 'Resultado de exames - Área do Médico'.</msg>
+<status status="PASS" starttime="20210912 18:52:24.871" endtime="20210912 18:52:24.882"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>css=#__next &gt; div &gt; div.Header_wrapper__1cgXS &gt; div.Header_navbar__1kRlG &gt; div &gt; div &gt; div.Navbar_end__1iJGy &gt; div &gt; div:nth-child(1) &gt; a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210912 18:52:24.883" endtime="20210912 18:52:24.972"/>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>css=#__next &gt; div &gt; div.Header_wrapper__1cgXS &gt; div.Header_navbar__1kRlG &gt; div &gt; div &gt; div.Navbar_end__1iJGy &gt; div &gt; div:nth-child(1) &gt; a</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20210912 18:52:24.992" level="INFO">Current page contains element 'css=#__next &gt; div &gt; div.Header_wrapper__1cgXS &gt; div.Header_navbar__1kRlG &gt; div &gt; div &gt; div.Navbar_end__1iJGy &gt; div &gt; div:nth-child(1) &gt; a'.</msg>
+<status status="PASS" starttime="20210912 18:52:24.973" endtime="20210912 18:52:24.992"/>
+</kw>
+<status status="PASS" starttime="20210912 18:52:21.676" endtime="20210912 18:52:24.993"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210912 18:52:24.995" endtime="20210912 18:52:28.498"/>
+</kw>
+<status status="PASS" starttime="20210912 18:52:24.994" endtime="20210912 18:52:28.499"/>
+</kw>
+<tag>auto</tag>
+<status status="PASS" starttime="20210912 18:52:15.883" endtime="20210912 18:52:28.499"/>
+</test>
+<status status="PASS" starttime="20210912 18:49:42.339" endtime="20210912 18:52:28.503"/>
+</suite>
+<status status="PASS" starttime="20210912 18:49:42.288" endtime="20210912 18:52:28.511"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="0" skip="0">auto</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="BDD Bionexo">Test.BDD Bionexo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
